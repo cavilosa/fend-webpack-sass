@@ -35,7 +35,7 @@ app.get('/test', function (req, res) {
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
-/*
+
 let projectData = {};
 
 // Post Route
@@ -57,4 +57,4 @@ app.get("/all", getData);
 // Callback function to complete GET '/all'
 function getData (req, res) {
     res.send(projectData);
-}*/
+}
