@@ -35,3 +35,26 @@ app.get('/test', function (req, res) {
 app.listen(8081, function () {
     console.log('Example app listening on port 8081!')
 })
+/*
+let projectData = {};
+
+// Post Route
+app.post("/addWeather", addWeather);
+
+function addWeather(req, res){
+    newEntry = {
+        city: req.body.city,
+        weather: req.body.weather,
+        temperature: req.body.temperature,
+        feelsLike: req.body.feelsLike,
+        wind: req.body.wind
+    }
+    projectData = newEntry;
+}
+
+app.get("/all", getData);
+
+// Callback function to complete GET '/all'
+function getData (req, res) {
+    res.send(projectData);
+}*/
