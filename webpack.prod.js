@@ -8,8 +8,9 @@ const TerserPlugin = require('terser-webpack-plugin');
 module.exports = {
     entry: './src/client/index.js',
     mode: 'production',
-    optimization: {
-        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    output: {
+        libraryTarget: 'var',
+        library: 'Client'
     },
     module: {
         rules: [
@@ -20,7 +21,7 @@ module.exports = {
             },
             {
                 test: /\.scss$/,
-                use: [ MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader' ]
+                use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
             }
         ]
     },
@@ -29,6 +30,12 @@ module.exports = {
             template: "./src/client/views/index.html",
             filename: "./index.html",
         }),
-        new MiniCssExtractPlugin({filename: '[name].css'})
-    ]
+
+        new MiniCssExtractPlugin({
+            filename: "[name].css"
+        })
+    ],
+    optimization: {
+        minimizer: [new TerserPlugin({}), new OptimizeCSSAssetsPlugin({})],
+    },
 }
