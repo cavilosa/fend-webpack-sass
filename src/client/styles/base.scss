@@ -12,3 +12,66 @@ section {
     max-width: 800px;
     margin: 50px auto;
 }
+
+body {
+    background-color: #7FFF00;
+}
+
+section {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.zipcode {
+    text-align: center;
+}
+
+textarea {
+    width: 250px;
+    height:100px;
+    background-color: #FF69B4;
+}
+
+#feelings {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mood {
+    text-align: center;
+}
+
+button {
+    margin: 20px;
+    border-radius: 10px;
+    color: #DC143C;
+    background-color: #F8F8FF;
+    height: 30px;
+    font-weight: bold;
+}
+
+.recent-entry h2 {
+    text-align: center;
+}
+
+#entryHolder {
+    font-size: 1.5em;
+    background-color: inherit;
+    border-radius: 10px;
+    color: #000066;
+    display: grid;
+    grid-template-columns: repeat(2 1fr);
+    grid-template-rows: repeat(2 1fr);
+    grid-template-areas:
+    "fs fs1"
+    "sc sc1"
+    "th th1"
+    "fr fr1"
+    "fif fif1"
+    "sx sx1";
+    gap: 10px;
+}
